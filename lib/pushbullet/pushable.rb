@@ -2,19 +2,19 @@ module Pushbullet
   module Pushable
 
     def push_note(title, body)
-      Push.create :note, target_id, title: title, body: body
+      Push.create_note target_id, title, body
     end
 
     def push_link(title, url, body)
-      Push.create :link, target_id, title: title, url: url, body: body
+      Push.create_link target_id, title, url, body
     end
 
     def push_address(name, address)
-      Push.create :address, target_id, name: name, address: address
+      Push.create_address target_id, name, address
     end
 
     def push_list(title, items)
-      Push.create :list, target_id, title: title, items: items
+      Push.create_list target_id, title, items
     end
   end
 end
