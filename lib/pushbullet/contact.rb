@@ -1,7 +1,6 @@
 module Pushbullet
   class Contact < Resource
     include Pushable
-    PATH = 'contacts'
 
     def self.me
       new Pushbullet.client.get('users/me')

@@ -8,6 +8,8 @@ require 'pushbullet/device'
 require 'pushbullet/push'
 require 'pushbullet/channel'
 
+require 'core_ext/string.rb'
+
 module Pushbullet
   def self.api_token=(api_token)
     @api_token = api_token
