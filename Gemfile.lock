@@ -8,6 +8,12 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (4.2.0)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
     addressable (2.3.6)
     ast (2.0.0)
     astrolabe (1.3.0)
@@ -18,9 +24,13 @@ GEM
       safe_yaml (~> 1.0.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    i18n (0.7.0)
     json (1.8.2)
     method_source (0.8.2)
     mime-types (2.4.3)
+    minitest (5.5.1)
     multi_json (1.10.1)
     netrc (0.10.2)
     parser (2.2.0.2)
@@ -53,6 +63,7 @@ GEM
       powerpack (~> 0.0.6)
       rainbow (>= 1.99.1, < 3.0)
       ruby-progressbar (~> 1.4)
+    rubocop-rspec (1.2.1)
     ruby-progressbar (1.7.1)
     safe_yaml (1.0.4)
     simplecov (0.9.1)
@@ -61,6 +72,9 @@ GEM
       simplecov-html (~> 0.8.0)
     simplecov-html (0.8.0)
     slop (3.6.0)
+    thread_safe (0.3.4)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
     vcr (2.9.3)
     webmock (1.20.4)
       addressable (>= 2.3.6)
@@ -72,10 +86,12 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   bundler
+  factory_girl
   pry
   rake
   rspec (~> 3.0.0)
   rubocop
+  rubocop-rspec
   ruby-pushbullet!
   simplecov
   vcr

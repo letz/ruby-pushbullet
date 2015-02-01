@@ -5,7 +5,10 @@ if ENV['SIMPLECOV']
 end
 require 'webmock/rspec'
 require 'awesome_print'
+require 'factory_girl'
+require 'pry'
 require 'vcr'
+require 'support/factories'
 
 require 'bundler/setup'
 Bundler.setup
@@ -23,4 +26,7 @@ RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
   config.filter_run focus: true
   config.order = 'random'
+  config.include FactoryGirl::Syntax::Methods
 end
+
+Pushbullet.api_token = 'DhOX5Q8Fps9mq4g90yfrfioRPyo1qQRd'

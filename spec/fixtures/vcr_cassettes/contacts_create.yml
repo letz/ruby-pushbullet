@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://DhOX5Q8Fps9mq4g90yfrfioRPyo1qQRd:@api.pushbullet.com/v2/contacts
+    body:
+      encoding: US-ASCII
+      string: name=Letz&email=letzdevelopment%40gmail.com
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '43'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Limit:
+      - '16384'
+      X-Ratelimit-Remaining:
+      - '16313'
+      X-Ratelimit-Reset:
+      - '1422816448'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 01 Feb 2015 18:40:00 GMT
+      Server:
+      - Google Frontend
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"active":true,"iden":"ujDyIULYrzUsjz2gRnO9Aq","created":1.422815999826493e+09,"modified":1.4228159998998592e+09,"name":"Letz","email":"letzdevelopment@gmail.com","email_normalized":"letzdevelopment@gmail.com","image_url":"https://lh4.googleusercontent.com/-8DrZDuQiorA/AAAAAAAAAAI/AAAAAAAAABE/E2qsJVU6OVs/photo.jpg","status":"user"}'
+    http_version: 
+  recorded_at: Sun, 01 Feb 2015 18:40:00 GMT
+recorded_with: VCR 2.9.3
