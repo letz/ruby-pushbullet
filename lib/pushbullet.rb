@@ -9,7 +9,6 @@ require 'pushbullet/push'
 require 'pushbullet/channel'
 
 module Pushbullet
-
   def self.api_token=(api_token)
     @api_token = api_token
   end

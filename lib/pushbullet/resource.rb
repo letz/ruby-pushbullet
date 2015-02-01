@@ -1,6 +1,5 @@
 module Pushbullet
   class Resource < OpenStruct
-
     def self.create(params)
       new Pushbullet.client.post(self::PATH, params)
     end

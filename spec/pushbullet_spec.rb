@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Pushbullet do
-  context 'lol' do
-    it 'cenas'
+  context 'todo' do
+    it 'pending :)'
   end
 end
