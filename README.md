@@ -9,6 +9,14 @@ This library is an implementation of [Pushbullet API](https://docs.pushbullet.co
 
 Feel free to contribute :smile:
 
+**NOTE: This is not production ready (yet).**
+
+## Installation
+
+```
+gem install ruby-pushbullet
+```
+
 ## Configuration
 
 You can get your api token from [Account Settings](https://www.pushbullet.com/account)
