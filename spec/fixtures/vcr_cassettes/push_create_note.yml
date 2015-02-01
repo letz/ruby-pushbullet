@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://DhOX5Q8Fps9mq4g90yfrfioRPyo1qQRd:@api.pushbullet.com/v2/pushes
+    body:
+      encoding: US-ASCII
+      string: title=Le%20title&body=Le%20body&type=note&email=letzdevelopment%40gmail.com
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '75'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ratelimit-Limit:
+      - '16384'
+      X-Ratelimit-Remaining:
+      - '16381'
+      X-Ratelimit-Reset:
+      - '1422834116'
+      Date:
+      - Sun, 01 Feb 2015 23:12:20 GMT
+      Server:
+      - Google Frontend
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhY3RpdmUiOnRydWUsImlkZW4iOiJ1akMyZjd6NnN2Y3NqQXlmRmN1Tm9H
+        IiwiY3JlYXRlZCI6MS40MjI4MzIzMzk5NzExNTZlKzA5LCJtb2RpZmllZCI6
+        MS40MjI4MzIzNDAwNDQwNTQ3ZSswOSwidHlwZSI6Im5vdGUiLCJkaXNtaXNz
+        ZWQiOmZhbHNlLCJzZW5kZXJfaWRlbiI6InVqQzJmN3o2c3ZjIiwic2VuZGVy
+        X2VtYWlsIjoicmljYXJkbzdybEBnbWFpbC5jb20iLCJzZW5kZXJfZW1haWxf
+        bm9ybWFsaXplZCI6InJpY2FyZG83cmxAZ21haWwuY29tIiwic2VuZGVyX25h
+        bWUiOiJSaWNhcmRvIExlaXTDo28iLCJyZWNlaXZlcl9pZGVuIjoidWpEeUlV
+        TFlyelUiLCJyZWNlaXZlcl9lbWFpbCI6ImxldHpkZXZlbG9wbWVudEBnbWFp
+        bC5jb20iLCJyZWNlaXZlcl9lbWFpbF9ub3JtYWxpemVkIjoibGV0emRldmVs
+        b3BtZW50QGdtYWlsLmNvbSIsInRpdGxlIjoiTGUgdGl0bGUiLCJib2R5Ijoi
+        TGUgYm9keSJ9
+    http_version:
+  recorded_at: Sun, 01 Feb 2015 23:12:20 GMT
+recorded_with: VCR 2.9.3
