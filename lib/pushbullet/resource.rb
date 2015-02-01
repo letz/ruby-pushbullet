@@ -1,10 +1,5 @@
 module Pushbullet
   class Resource < OpenStruct
-    def self.path
-      klass = self.is_a?(Class) ? self : self.class
-      @path ||= "#{klass.to_s.demodulize.downcase}s"
-    end
-
     def self.create(params)
       new Pushbullet.client.post(path, params)
     end
@@ -23,6 +18,11 @@ module Pushbullet
     def destroy
       Pushbullet.client.delete "#{self.class.path}/#{iden}"
       true
+    end
+
+    def self.path
+      klass = self.is_a?(Class) ? self : self.class
+      @path ||= "#{klass.to_s.demodulize.downcase}s"
     end
   end
 end
