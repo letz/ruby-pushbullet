@@ -1,6 +1,6 @@
 Gem::Specification.new do |gem|
   gem.name          = %q{ruby-pushbullet}
-  gem.version       = '0.1'
+  gem.version       = '0.1.1'
   gem.authors       = ['Ricardo Leitao']
   gem.email         = ['letzdevelopment@gmail.com']
   gem.summary       = %q{Ruby client of Pushbullet API.}
