@@ -55,7 +55,27 @@ device.save #update
 
 ### Push
 
-DOC TODO...
+```ruby
+# Id can be an device id or a email
+
+Pushbullet::Push.create_note(id, title, body)
+Pushbullet::Push.create_link(id, title, url, body)
+Pushbullet::Push.create_address(id, name, address)
+Pushbullet::Push.create_list(id, title, items)
+```
+
+**Or directly from a device or a contact**
+
+```ruby
+me = Pushbullet::Contact.me
+me.push_note(title, body)
+
+# or...
+
+device = Pushbullet::Device.all.first
+device.push_link(title, link, body)
+
+```
 
 ### Channel
 
