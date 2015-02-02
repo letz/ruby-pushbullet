@@ -12,7 +12,9 @@ module Pushbullet
     end
 
     def self.get_info(tag)
-      new Pushbullet.client.get("channel-info?tag=#{tag}")
+      Pushbullet.client.get("channel-info?tag=#{tag}")["recent_pushes"].map do |push|
+        Pushbullet::Push.new push
+      end
     end
 
     def self.path

@@ -7,7 +7,7 @@ describe Pushbullet::Channel do
 
       it 'returns channel info' do
         VCR.use_cassette('channel_info') do
-          expect(described_class.get_info tag).to be_a described_class
+          expect(described_class.get_info tag).to be_a Array
         end
       end
     end
