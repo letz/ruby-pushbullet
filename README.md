@@ -1,6 +1,6 @@
 # Ruby Pushbullet API
 
-[![Build Status](https://travis-ci.org/letz/ruby-pushbullet.svg)](https://travis-ci.org/letz/ruby-pushbullet)
+[![Build Status](https://travis-ci.org/letz/ruby-pushbullet.svg?branch=master)](https://travis-ci.org/letz/ruby-pushbullet)
 [![Code Climate](https://codeclimate.com/github/letz/ruby-pushbullet/badges/gpa.svg)](https://codeclimate.com/github/letz/ruby-pushbullet)
 [![Gem Version](https://badge.fury.io/rb/ruby-pushbullet.svg)](http://badge.fury.io/rb/ruby-pushbullet)
 
