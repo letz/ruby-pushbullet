@@ -12,8 +12,7 @@ module Pushbullet
     end
 
     def self.get_info(tag)
-      Pushbullet.client.get("channel-info?tag=#{tag}")
-      true
+      new Pushbullet.client.get("channel-info?tag=#{tag}")
     end
 
     def self.path

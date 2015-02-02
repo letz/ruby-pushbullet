@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://DhOX5Q8Fps9mq4g90yfrfioRPyo1qQRd:@api.pushbullet.com/v2/subscriptions/ujx7XdJ9W8qsjAlOnVVSqy
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Limit:
+      - '16384'
+      X-Ratelimit-Remaining:
+      - '16368'
+      X-Ratelimit-Reset:
+      - '1422844422'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 02 Feb 2015 01:52:59 GMT
+      Server:
+      - Google Frontend
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Mon, 02 Feb 2015 01:52:59 GMT
+recorded_with: VCR 2.9.3
