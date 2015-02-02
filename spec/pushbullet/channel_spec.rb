@@ -10,6 +10,14 @@ describe Pushbullet::Channel do
           expect(described_class.get_info tag).to be_a described_class
         end
       end
+
+       it 'returns channel with recent pushes' do
+        VCR.use_cassette('channel_info') do
+          described_class.get_info(tag).recent_pushes.each do |push|
+            expect(push).to be_a Pushbullet::Push
+          end
+        end
+      end
     end
   end
 

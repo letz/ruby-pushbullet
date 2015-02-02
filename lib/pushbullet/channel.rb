@@ -13,7 +13,7 @@ module Pushbullet
 
     def self.get_info(tag)
       channel = new Pushbullet.client.get("channel-info?tag=#{tag}")
-      channel['recent_pushes'].map! {|push| Pushbullet::Push.new push}
+      channel['recent_pushes'].map! { |push| Pushbullet::Push.new push}
       channel
     end
 
