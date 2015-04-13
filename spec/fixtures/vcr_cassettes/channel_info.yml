@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://DhOX5Q8Fps9mq4g90yfrfioRPyo1qQRd:@api.pushbullet.com/v2/channel-info?tag=jblow
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Limit:
+      - '16384'
+      X-Ratelimit-Remaining:
+      - '16376'
+      X-Ratelimit-Reset:
+      - '1422839172'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 02 Feb 2015 01:02:44 GMT
+      Server:
+      - Google Frontend
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"iden":"ujxPklLhvyKsjAvkMyTVh6","name":"Jonathan Blow","tag":"jblow","description":"New
+        comments on the web by Jonathan Blow.","image_url":"https://pushbullet.imgix.net/ujxPklLhvyK-6fXf4O2JQ1dBKQedhypIKwPX0lyFfwXW/jonathan-blow.png","subscriber_count":2,"recent_pushes":[{"active":true,"created":1.4228082603693361e+09,"modified":1.4228082603693361e+09,"type":"link","dismissed":false,"sender_name":"Jonathan
+        Blow","channel_iden":"ujxPklLhvyKsjAvkMyTVh6","title":"New comment on HN by
+        Jonathan Blow","body":"My point is that you can solve this one symptom but
+        your program will have many other problems due to GC (provided it does a lot
+        of work). It is like whack-a-mole in that there are always more moles.","url":"https://news.ycombinator.com/item?id=8980421"},{"active":true,"created":1.422798660727149e+09,"modified":1.422798660727149e+09,"type":"link","dismissed":false,"sender_name":"Jonathan
+        Blow","channel_iden":"ujxPklLhvyKsjAvkMyTVh6","title":"New comment on HN by
+        Jonathan Blow","body":"It is only an implementation issue if it is possible
+        to solve the issue.\u003cp\u003eNobody has ever built a garbage collector
+        that does not slow your program down or cause it to use vastly more resources
+        than it would otherwise. (Claims to the contrary are always implicitly caveated).\u003cp\u003eGiven
+        that this is the case, it really does start looking like a language issue.
+        Yes you can rearchitect the GC to care more about locality, but you are just
+        pushing the dust around on the floor: you will find a different problem.","url":"https://news.ycombinator.com/item?id=8979853"},{"active":true,"created":1.4227266561493518e+09,"modified":1.4227266561493518e+09,"type":"link","dismissed":false,"sender_name":"Jonathan
+        Blow","channel_iden":"ujxPklLhvyKsjAvkMyTVh6","title":"New comment on HN by
+        Jonathan Blow","body":"Show me your commits where you''ve fixed lots of driver
+        bugs. You sound like you have no idea what you''re talking about.","url":"https://news.ycombinator.com/item?id=8977344"},{"active":true,"created":1.4223061366878679e+09,"modified":1.4223061366878679e+09,"type":"link","dismissed":false,"sender_name":"Jonathan
+        Blow","channel_iden":"ujxPklLhvyKsjAvkMyTVh6","title":"New comment on HN by
+        Jonathan Blow","body":"Which is why people who are serious about memory write
+        their own allocators (or link preferred allocators with known behavior). It
+        is an extremely common thing.","url":"https://news.ycombinator.com/item?id=8949509"},{"active":true,"created":1.422302518161314e+09,"modified":1.422302518161314e+09,"type":"link","dismissed":false,"sender_name":"Jonathan
+        Blow","channel_iden":"ujxPklLhvyKsjAvkMyTVh6","title":"New comment on HN by
+        Jonathan Blow","body":"It''s bad.\u003cp\u003eThe reason is because you don''t
+        control the GC and don''t even necessarily know what exactly drives the decisions
+        it makes. So once you want to go beyond a certain level of performance, there
+        is no right answer. You are just randomly trying stuff and kind of flailing.\u003cp\u003eIn
+        C++ (or another direct-memory language), there \u003ci\u003eis\u003c/i\u003e
+        a right answer. You can always make the memory do exactly what you want it
+        to, and there''s always a clear path to get there from wherever you are.","url":"https://news.ycombinator.com/item?id=8949194"},{"active":true,"created":1.422225070409618e+09,"modified":1.422225070409618e+09,"type":"link","dismissed":false,"sender_name":"Jonathan
+        Blow","channel_iden":"ujxPklLhvyKsjAvkMyTVh6","title":"New comment on HN by
+        Jonathan Blow","body":"No, no it isn''t.\u003cp\u003eThere is always some
+        garbage velocity beyond which any given system is not able to cope.\u003cp\u003eUsually
+        that limit is kinda small compared to what you''d actually like your program
+        to be able to do.","url":"https://news.ycombinator.com/item?id=8944488"},{"active":true,"created":1.42222203965698e+09,"modified":1.42222203965698e+09,"type":"link","dismissed":false,"sender_name":"Jonathan
+        Blow","channel_iden":"ujxPklLhvyKsjAvkMyTVh6","title":"New comment on HN by
+        Jonathan Blow","body":"When I think of what I want in an operating system,
+        \"I wish it would lock up occasionally while everything garbage collects\"
+        is not high on the list.","url":"https://news.ycombinator.com/item?id=8944355"},{"active":true,"created":1.4218015277376e+09,"modified":1.4218015277376e+09,"type":"link","dismissed":false,"sender_name":"Jonathan
+        Blow","channel_iden":"ujxPklLhvyKsjAvkMyTVh6","title":"New comment on HN by
+        Jonathan Blow","body":"You can''t schedule something unknown.","url":"https://news.ycombinator.com/item?id=8920782"},{"active":true,"created":1.421376056481366e+09,"modified":1.421376056481366e+09,"type":"link","dismissed":false,"sender_name":"Jonathan
+        Blow","channel_iden":"ujxPklLhvyKsjAvkMyTVh6","title":"New comment on HN by
+        Jonathan Blow","body":"Steam doesn''t deal with its own files. It deals mainly
+        with random games that are creating tons of random files.","url":"https://news.ycombinator.com/item?id=8896969"},{"active":true,"created":1.420861842632239e+09,"modified":1.420861842632239e+09,"type":"link","dismissed":false,"sender_name":"Jonathan
+        Blow","channel_iden":"ujxPklLhvyKsjAvkMyTVh6","title":"New comment on HN by
+        Jonathan Blow","body":"See this graph:\u003cp\u003e\u003ca href=\"http://www.extremetech.com/wp-content/uploads/2013/08/CPU-Scaling.jpg\"
+        rel=\"nofollow\"\u003ehttp://www.extremetech.com/wp-content/uploads/2013/08/CPU-Sc...\u003c/a\u003e\u003cp\u003eThe
+        green line was the only one still going, and it plateaued about a year ago
+        (you''d see that in a newer graph).","url":"https://news.ycombinator.com/item?id=8865836"}]}'
+    http_version: 
+  recorded_at: Mon, 02 Feb 2015 01:02:44 GMT
+recorded_with: VCR 2.9.3
