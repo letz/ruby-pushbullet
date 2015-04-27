@@ -27,6 +27,8 @@ RSpec.configure do |config|
   config.filter_run focus: true
   config.order = 'random'
   config.include FactoryGirl::Syntax::Methods
+
+  Dir['./spec/shared/**/*.rb'].each { |f| require f }
 end
 
 Pushbullet.api_token = 'DhOX5Q8Fps9mq4g90yfrfioRPyo1qQRd'

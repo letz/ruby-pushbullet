@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://DhOX5Q8Fps9mq4g90yfrfioRPyo1qQRd:@api.pushbullet.com/v2/contacts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: OK
+    headers:
+      X-Ratelimit-Limit:
+      - '16384'
+      X-Ratelimit-Remaining:
+      - '16310'
+      X-Ratelimit-Reset:
+      - '1422816448'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 28 Apr 2015 00:01:47 GMT
+      Server:
+      - Google Frontend
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"error":{"message": "The resource could not be found.", "type": "invalid_request", "cat": "~(=^‥^)"}}'
+    http_version:
+  recorded_at: Tue, 28 Apr 2015 00:01:47 GMT
+recorded_with: VCR 2.9.3

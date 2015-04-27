@@ -7,6 +7,7 @@ require 'pushbullet/contact'
 require 'pushbullet/device'
 require 'pushbullet/push'
 require 'pushbullet/channel'
+require 'pushbullet/error'
 
 require 'core_ext/string.rb'
 
