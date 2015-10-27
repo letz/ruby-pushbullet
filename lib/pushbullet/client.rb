@@ -6,7 +6,7 @@ module Pushbullet
     END_POINT =  "https://api.pushbullet.com/v#{API_VERSION}/"
 
     def get(path)
-      JSON.parse(generic_request(path).get &handle_error)
+      JSON.parse(generic_request(path).get(&handle_error))
     end
 
     def post(path, params = {})
