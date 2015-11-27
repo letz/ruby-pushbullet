@@ -6,7 +6,6 @@ end
 require 'webmock/rspec'
 require 'awesome_print'
 require 'factory_girl'
-require 'pry'
 require 'vcr'
 require 'support/factories'
 
