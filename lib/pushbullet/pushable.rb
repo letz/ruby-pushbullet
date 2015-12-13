@@ -1,6 +1,5 @@
 module Pushbullet
   module Pushable
-
     def push_note(title, body)
       Push.create_note target_id, title, body
     end

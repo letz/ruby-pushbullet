@@ -1,5 +1,2 @@
-module Pushbullet
-  class Error < StandardError
-
-  end
+class Pushbullet::Error < StandardError
 end
