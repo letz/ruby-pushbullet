@@ -1,15 +1,24 @@
+# coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'pushbullet/version'
+
 Gem::Specification.new do |gem|
-  gem.name          = %q{ruby-pushbullet}
-  gem.version       = '0.1.4'
+  gem.name          = 'ruby-pushbullet'
+  gem.version       = Pushbullet::VERSION
   gem.authors       = ['Ricardo Leitao']
   gem.email         = ['letzdevelopment@gmail.com']
+  gem.licenses     = ['MIT']
+
   gem.summary       = %q{Ruby client of Pushbullet API.}
   gem.description   = %q{Ruby client of Pushbullet API.}
   gem.homepage      = %q{https://github.com/letz/ruby-pushbullet}
-  gem.license       = 'MIT'
 
-  gem.files         = Dir.glob("lib/**/*") + %w(README.md)
-  gem.test_files    = Dir.glob("spec/**/*")
+  gem.files         = `git ls-files -z`.split("\x0").reject do |f|
+    f.match(%r{^(test|spec|features)/})
+  end
+  gem.bindir        = 'exe'
+  gem.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   gem.require_paths = ['lib']
 
   gem.add_development_dependency 'bundler'
@@ -19,9 +28,8 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'webmock'
   gem.add_development_dependency 'rubocop'
   gem.add_development_dependency 'rubocop-rspec'
-  gem.add_development_dependency 'awesome_print'
   gem.add_development_dependency 'vcr'
-  gem.add_development_dependency 'simplecov'
+  gem.add_development_dependency 'pry'
 
   gem.add_dependency 'rest-client', '~> 1.8.0'
   gem.add_dependency 'json'

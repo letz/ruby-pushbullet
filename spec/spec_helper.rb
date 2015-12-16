@@ -4,7 +4,6 @@ if ENV['SIMPLECOV']
   puts 'required simplecov'
 end
 require 'webmock/rspec'
-require 'awesome_print'
 require 'factory_girl'
 require 'vcr'
 require 'support/factories'
@@ -30,4 +29,6 @@ RSpec.configure do |config|
   Dir['./spec/shared/**/*.rb'].each { |f| require f }
 end
 
-Pushbullet.api_token = 'DhOX5Q8Fps9mq4g90yfrfioRPyo1qQRd'
+Pushbullet.configure do |config|
+  config.api_token = 'DhOX5Q8Fps9mq4g90yfrfioRPyo1qQRd'
+end

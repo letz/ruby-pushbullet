@@ -1,23 +1,32 @@
+# libs
 require 'json'
 require 'logger'
+require 'rest-client'
+# external
+require 'core_ext/string'
+# pushbullet
+require 'pushbullet/version'
 require 'pushbullet/pushable'
+require 'pushbullet/configuration'
 require 'pushbullet/client'
 require 'pushbullet/resource'
-require 'pushbullet/contact'
+require 'pushbullet/error'
+require 'pushbullet/user'
 require 'pushbullet/device'
 require 'pushbullet/push'
 require 'pushbullet/channel'
-require 'pushbullet/error'
-
-require 'core_ext/string.rb'
+require 'pushbullet/subscription'
+require 'pushbullet/chat'
+require 'pushbullet/contact'
 
 module Pushbullet
-  def self.api_token=(api_token)
-    @api_token = api_token
-  end
+  @configuration = Configuration.new
 
-  def self.api_token
-    @api_token
+  def self.configure
+    if block_given?
+      yield @configuration
+      client.api_token =  @configuration.api_token
+    end
   end
 
   def self.client

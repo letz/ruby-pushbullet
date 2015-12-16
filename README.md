@@ -24,7 +24,9 @@ gem install ruby-pushbullet
 You can get your api token from [Account Settings](https://www.pushbullet.com/account)
 
 ```ruby
-Pushbullet.api_token = 'YOUR_API_TOKEN'
+Pushbullet.configure do |config|
+  config.api_token = 'YOUR_API_TOKEN'
+end
 ```
 
 ## Usage
@@ -32,14 +34,11 @@ Pushbullet.api_token = 'YOUR_API_TOKEN'
 ### Contact
 
 ```ruby
-# Get all contacts
-Pushbullet::Contact.all
+# Get all Chats
+Pushbullet::Chat.all
 
 # create contact
-contact = Pushbullet::Contact.create('Name', 'example@mail.com')
-contact.name = 'Another name'
-contact.save # update
-
+contact = Pushbullet::Chat.create('example@mail.com')
 ```
 
 ### Device
@@ -69,19 +68,21 @@ Pushbullet::Push.create_list(id, title, items)
 **Or directly from a device or a contact**
 
 ```ruby
-me = Pushbullet::Contact.me
+me = Pushbullet::User.me
 me.push_note(title, body)
 
 # or...
 
 device = Pushbullet::Device.all.first
 device.push_link(title, link, body)
-
 ```
 
-### Channel
+### Subscription
 
-TODO...
+```ruby
+# Get all subscriptions
+Pushbullet::Subscrition.all
+```
 
 
 ## Contributing

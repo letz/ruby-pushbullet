@@ -1,17 +1,10 @@
-module Pushbullet
-  class Device < Resource
-    include Pushable
+class Pushbullet::Device < Pushbullet::Resource
+  include Pushbullet::Pushable
 
-    def self.create(nickname, type)
-      super(nickname: nickname, type: type)
-    end
+  register_attributes :iden, :active, :created, :modified, :icon, :nickname,
+                      :generated_nickname, :manufacturer, :model, :app_version,
+                      :fingerprint, :key_fingerprint, :push_token, :has_sms
 
-    def save
-      super(nickname: nickname)
-    end
-
-    def target_id
-      iden
-    end
-  end
+  register_updatable_attributes :nickname, :model, :manufacturer, :push_token,
+                                :app_version, :icon, :has_sms
 end
