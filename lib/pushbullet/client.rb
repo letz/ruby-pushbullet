@@ -2,6 +2,12 @@ class Pushbullet::Client
   API_VERSION = 2
   END_POINT =  "https://api.pushbullet.com/v#{API_VERSION}/"
 
+  attr_accessor :api_token
+
+  def initialize(api_token = nil)
+    @api_token = api_token
+  end
+
   def get(path)
     JSON.parse(generic_request(path).get(&handle_error))
   end
@@ -19,7 +25,7 @@ class Pushbullet::Client
   end
 
   def generic_request(path)
-    RestClient::Resource.new("#{END_POINT}#{path}", Pushbullet.api_token, '')
+    RestClient::Resource.new("#{END_POINT}#{path}", api_token, '')
   end
 
   private

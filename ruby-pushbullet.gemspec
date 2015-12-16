@@ -19,9 +19,8 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'webmock'
   gem.add_development_dependency 'rubocop'
   gem.add_development_dependency 'rubocop-rspec'
-  gem.add_development_dependency 'awesome_print'
   gem.add_development_dependency 'vcr'
-  gem.add_development_dependency 'simplecov'
+  gem.add_development_dependency 'pry'
 
   gem.add_dependency 'rest-client', '~> 1.8.0'
   gem.add_dependency 'json'

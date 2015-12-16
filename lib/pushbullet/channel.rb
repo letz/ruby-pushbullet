@@ -1,22 +1,12 @@
 class Pushbullet::Channel < Pushbullet::Resource
-  include Pushbullet::Pushable
+  register_attributes :iden, :description, :image_url, :name, :tag,
+                      :subscriber_count, :recent_pushes
 
-  def self.subscribe(name)
-    create(channel_tag: name)
-  end
-
-  def self.unsubscribe(idn)
-    Pushbullet.client.delete "#{path}/#{idn}"
-    true
-  end
-
-  def self.get_info(tag)
-    channel = new Pushbullet.client.get("channel-info?tag=#{tag}")
+  def self.get_info(tag, no_recent_pushes = nil)
+    query = "channel-info?tag=#{tag}"
+    query += "&no_recent_pushes=#{no_recent_pushes}" unless no_recent_pushes.nil?
+    channel = new Pushbullet.client.get(query)
     channel.recent_pushes.map! { |push| Pushbullet::Push.new push }
     channel
-  end
-
-  def self.path
-    'subscriptions'
   end
 end

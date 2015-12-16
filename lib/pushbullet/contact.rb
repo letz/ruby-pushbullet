@@ -1,19 +1,10 @@
-class Pushbullet::Contact < Pushbullet::Resource
-  include Pushbullet::Pushable
+class Pushbullet::Contact
 
-  def self.me
-    new Pushbullet.client.get('users/me')
-  end
+  attr_reader :type, :iden, :name, :email, :email_normalized, :image_url
 
-  def self.create(name, email)
-    super(name: name, email: email)
-  end
-
-  def save
-    super(name: name)
-  end
-
-  def target_id
-    email
+  def initialize(attributes)
+    attributes.each do |key, value|
+      instance_variable_set(:"@#{key}", value)
+    end
   end
 end
