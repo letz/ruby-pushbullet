@@ -5,6 +5,7 @@ require 'rest-client'
 # external
 require 'core_ext/string'
 # pushbullet
+require 'pushbullet/version'
 require 'pushbullet/pushable'
 require 'pushbullet/configuration'
 require 'pushbullet/client'
